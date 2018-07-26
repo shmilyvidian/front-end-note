@@ -1,1 +1,3 @@
-记录每天的对前端知识的理解
+## 前端知识梳理
+- Make a little progress every day
+- Fighting on the shoulders of the giant
