@@ -60,3 +60,16 @@
 ```
 ## compose
 实际需求中需要我们组合函数来实现
+```javascript
+    var compose = function(...args){
+        return function fn(res){
+            var list = args.length
+            while(list.length > 0){
+                result = list.pop()(result)
+            }
+            return list
+        }
+    }   
+
+    var compose = (...args)=>(res)=>args.reverse().reduce((res)=>fn(res),res)
+```
