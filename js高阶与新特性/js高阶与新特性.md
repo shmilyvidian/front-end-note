@@ -13,19 +13,12 @@
     ```
 - es5
     ```javascript
-    function currying(func, args) {
-        var arity = func.length;
-        var args = args || [];
-
-        return function () {
-            var _args = [].slice.call(arguments);
-            Array.prototype.unshift.apply(_args, args);
-
-            if(_args.length < arity) {
-                return curry.call(null, func, _args);
-            }
-
-            return func.apply(null, _args);
+    function currying(func, ...args) {
+        if(args.length > func.length){
+            func(args)
+        }
+        return function(...args2){
+            return currying(func,...args,...args2)
         }
     }
     ```
