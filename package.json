@@ -19,7 +19,6 @@
   "homepage": "https://github.com/shmilyvidian/front-end-note#readme",
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
